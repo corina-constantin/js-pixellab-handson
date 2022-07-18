@@ -1,8 +1,9 @@
 var object = {
-  name: 'Dragos',
-  surname: 'Iordache',
-  age: 35,
-  petOwner: false,
+  name: 'Corina',
+  surname: 'Constantin',
+  age: 32,
+  petOwner: true,
+  carOwner: true,
 };
 
 console.warn(`
@@ -32,3 +33,5 @@ consola folosind operatorul de concatenare
 console.log(
   object.name + ' ' + object.surname + ' are ' + object.age + ' ani.',
 );
+
+console.log(object.name + ' s-a nascut in ' + (2022 - object.age).toString());
