@@ -9,7 +9,6 @@ switch (errorCode) {
     break;
   case 300:
     console.log('300');
-    break;
   case 400:
     console.log('400');
     break;
