@@ -24,3 +24,34 @@ O functie wrapper este o functie care “imbraca” o functie existenta pentru a
 const calculateSquareArea = (length) => {
   return calculateRectangleArea(length, length);
 };
+
+console.warn(`
+Calculeaza suprafata de tapet necesara pentru o camera de 12 pe 9 m cu tavan inalt de 2.5m,
+stiind ca exista o usa de 3 pe 2 si o suprafata de ferestre de 3 pe 2. “Suprafata de tapet necesara este xxx metri patrati.”
+`);
+
+const longWallSurface1 = calculateRectangleArea(12, 2.5);
+const shortWallSurface1 = calculateRectangleArea(9, 2.5);
+const totalWallSurface1 = (longWallSurface1 + shortWallSurface1) * 2;
+const doorSurface1 = calculateRectangleArea(3, 2);
+const windowSurface1 = calculateRectangleArea(3, 2);
+const totalSurface1 = totalWallSurface1 - doorSurface1 - windowSurface1;
+
+console.log(
+  `Suprafata de tapet necesara este: ${totalSurface1} metri patrati.`,
+);
+
+console.warn(`
+Creaza o functie wrapper pentru calculateRectangleArea() care sa primeasca 4 parametrii: latimea si
+lungimea unui dreptunghi initial, apoi latimea si lungimea altui dreptunghi. Functia se va numi aggregateSurfaceArea().
+Folosind aceasta noua functie calculeaza suprafata totala a doua dreptunghiuri de 48 pe 92 si 51 pe 102.
+`);
+
+const aggregateSurfaceArea = (length1, width1, length2, width2) => {
+  return (
+    calculateRectangleArea(length1, width1) +
+    calculateRectangleArea(length2, width2)
+  );
+};
+
+console.log(aggregateSurfaceArea(48, 92, 51, 102));
