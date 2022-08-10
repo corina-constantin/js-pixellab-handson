@@ -40,12 +40,13 @@ afiseaza diferenta de varsta dintre fiecare membru al arrayului friends si ceila
 for (i = 0; i < person.friends.length; i++) {
   for (j = 0; j < person.friends.length; j++) {
     if (i != j) {
-      console.log(`Intre ${person.friends[i].name} si ${
-        person.friends[j].name
-      } este o diferenta de ${Math.abs(
-        person.friends[i].age - person.friends[j].age,
-      )} ani.
-        `);
+      console.log(
+        `Intre ${person.friends[i].name} si ${
+          person.friends[j].name
+        } este o diferenta de ${Math.abs(
+          person.friends[i].age - person.friends[j].age,
+        )} ani.`,
+      );
     }
   }
 }

@@ -1,4 +1,4 @@
-function watch() {
+function getTime() {
   const date = new Date();
   let hours = date.getHours();
   let minutes = date.getMinutes();
@@ -24,5 +24,5 @@ paragraph.innerText = paragraph;
 document.body.append(paragraph);
 
 setInterval(function () {
-  paragraph.innerText = watch();
+  paragraph.innerText = getTime();
 }, 1000);
