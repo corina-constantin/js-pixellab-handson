@@ -31,6 +31,9 @@
         name="userInput"
         id="userInput"
         placeholder="Ghiceste numarul"
+        required
+        min="1"
+        max="100"
       >
 
       <button
@@ -39,9 +42,12 @@
         id="checkButton"
       >Verifica</button>
 
+      <!-- <button type="reset">New Game</button> -->
+
       <p>
         Raspuns: <span id="checkMessage"></span>
       </p>
+
     </fieldset>
 
   </form>
